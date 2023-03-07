@@ -46,7 +46,7 @@ nav{
 }
 .navLinks li{
     list-style: none;
-    margin: 0 15px;
+    margin: 0 3vw;
 }
 .navLinks li a{
     font-size: 20px;
@@ -80,7 +80,7 @@ nav{
     width: 600px;
     border-radius: 50%;
     left: -13%;
-    top: 55%;
+    top: 45%;
     background: linear-gradient(45deg, var(--accent), var(--accent2));
     animation: object1 6s linear infinite;
 }
@@ -98,7 +98,7 @@ nav{
 @keyframes object1{
     50%{
         left: -13%;
-        top: 56%;
+        top: 46%;
     }
 }
 @keyframes object2{
@@ -112,7 +112,7 @@ nav{
 }
 .cols0{
     z-index: 5;
-    width: 60%;
+    width: 70%;
 }
 .topline{
     display: block;
@@ -149,68 +149,69 @@ p{
     width: 100%;
     position: relative;
     left: 50px;
+    margin-top: 25px;
 }
-button{
+.button{
     outline: none;
     border: none;
+    text-decoration: none;
     cursor: pointer;
     font-size: 20px;
     font-weight: 400;
     color: var(--background);
     background-color: var(--primary);
     padding: 8px 14px;
-    margin: 40px 5px;
+    margin: 40px 10px;
     letter-spacing: 2px;
     text-transform: capitalize;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     border-radius: 10px;
 }
-button:hover{
+.button:hover{
     background-color: var(--accent);
 }
 .imgbox{
     position: relative;
-    /*width: 100%;
-    height: 100%;*/
-    margin-left: 20%;
-}
-.imgbox img{
-    position:relative;
-    height: 100%;
-    width: calc(130% - 60px);
-    top: -100px;
-    right: 50px;
-    animation: animateUser 4s linear infinite;
-    transform: scaleX(-1);
+    width: 110%;
+    height: 110%;
+    margin-left: 0%;
 }
 
 .imgbox #brushstroke{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-35deg);
-    width: 160%;
+    top: 55%;
+    left: 55%;
+    transform: translate(-50%, -50%) rotate(-30deg);
+    width: 130%;
     height: auto;
-    filter: saturate(200%);
+    filter: saturate(150%);
     animation: animate 4s linear infinite;
 }
 .imgbox #me{
+    margin-top: 20%;
     bottom: 0;
+    height: 100%;
+    width: calc(130% - 60px);
+    top: 55%;
+    right: 55%;
+    animation: animateUser 4s linear infinite;
+    transform: scaleX(-1);
 }
-/*@keyframes animate {
-    50%{
-        top: 49%;
-        left: 51%;
-        width: 155%;
-    }
-}*/
 
-/*@keyframes animateUser {
+@keyframes animate {
+    50%{
+        top: 54%;
+        left: 56%;
+        width: 131%;
+    }
+}
+
+@keyframes animateUser {
     50%{
         right: 30px;
-        top: -90px;
+        top: -500px;
     }
-}*/
+}
 
 
 
@@ -226,3 +227,17 @@ button:hover{
         --background: #1C313A;
     }
   }
+
+/*Responsive Design*/
+@media only screen and (max-width: 1080px) {
+    .imgbox{
+        width: 130%;
+        height: 130%;
+        margin-left: 0%;
+    }
+  }
+/*Tablet*/
+@media only screen and (max-width: 970px) {
+    
+  }
+/*Smartphone*/
