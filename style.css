@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap');
 :root{
     --primary: #1C313A;
+    --secondary: #455A64;
     --accent: #F55900;
     --accent2: #FFA500;
     --background: white;
@@ -33,7 +34,7 @@ nav{
 }
 .logo{
     display: flex;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 800;
     color: var(--accent);
     letter-spacing: 3px;
@@ -48,9 +49,9 @@ nav{
     margin: 0 15px;
 }
 .navLinks li a{
-    font-size: 25px;
-    color: var(--primary);
-    letter-spacing: 3px;
+    font-size: 20px;
+    color: var(--secondary);
+    letter-spacing: 1px;
     text-decoration: none;
     text-transform: capitalize;
 }
@@ -59,8 +60,8 @@ nav{
     color: var(--accent);
 }
 .smlinks a{
-    font-size: 30px;
-    color: var(--primary);
+    font-size: 25px;
+    color: var(--secondary);
     margin: 25px 10px;
 }
 .wrapper{
@@ -78,32 +79,32 @@ nav{
     height: 600px;
     width: 600px;
     border-radius: 50%;
-    left: -12%;
-    top: 40%;
+    left: -13%;
+    top: 55%;
     background: linear-gradient(45deg, var(--accent), var(--accent2));
     animation: object1 6s linear infinite;
 }
 .wrapper::after{
     position: absolute;
     content: '';
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     border-radius: 50%;
     left: 35%;
     top: 12%;
-    background: linear-gradient(45deg, var(--accent), var(--accent2));
+    background: linear-gradient(-45deg, var(--accent2), var(--accent));
     animation: object2 6s linear infinite;
 }
 @keyframes object1{
     50%{
         left: -13%;
-        top: 41%;
+        top: 56%;
     }
 }
 @keyframes object2{
     50%{
         left: 35%;
-        top: 10%;
+        top: 11%;
     }
 }
 .cols{
@@ -116,21 +117,21 @@ nav{
 .topline{
     display: block;
     position:relative;
-    font-size: 35px;
-    letter-spacing: 5px;
+    font-size: 30px;
+    letter-spacing: 2px;
     color: var(--primary);
 }
 .topline::after{
     position: absolute;
     content:'';
     height: 4px;
-    width:45px;
+    width: 35px;
     bottom: 10px;
     background-color: var(--accent);
 }
 h1{
     display: block;
-    font-size: 7em;
+    font-size: 5em;
     font-weight: 900;
     color: var(--primary);
 }
@@ -147,13 +148,13 @@ p{
 .buttons{
     width: 100%;
     position: relative;
-    left: 150px;
+    left: 50px;
 }
 button{
     outline: none;
     border: none;
     cursor: pointer;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 400;
     color: var(--background);
     background-color: var(--primary);
@@ -161,20 +162,22 @@ button{
     margin: 40px 5px;
     letter-spacing: 2px;
     text-transform: capitalize;
-    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
 }
 button:hover{
     background-color: var(--accent);
 }
 .imgbox{
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
+    margin-left: 20%;
 }
 .imgbox img{
     position:relative;
-    height: 100%;
-    width: calc(130% - 80px);
+    height: 80%;
+    width: calc(90% - 80px);
     top: -100px;
     right: 50px;
     animation: animateUser 4s linear infinite;
