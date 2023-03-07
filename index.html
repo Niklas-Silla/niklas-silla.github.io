@@ -39,7 +39,7 @@
             <div class="cols cols1">
                 <div class="imgbox">
                     <img src="brushstroke.png" id="brushstroke">
-                    <img src="Kamera_a7iii.png" id="me">
+                    <img src="Me.png" id="me">
                 </div>
             </div>
         </div>
@@ -54,6 +54,18 @@
             backSpeed : 80,
             backDelay : 1500
         })
+    </script>
+    <!-- JavaScript-Code zum Aktivieren des Dark-Modus basierend auf der Systemeinstellung
+    Funktioniert nicht in einem <script>-Block-->
+    <script>
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        const toggleDarkMode = (shouldEnable) => {
+        document.body.classList.toggle('dark', shouldEnable);
+        };
+        toggleDarkMode(prefersDarkScheme.matches);
+        prefersDarkScheme.addEventListener('change', (event) => {
+        toggleDarkMode(event.matches);
+        });
     </script>
 </body>
 </html>   

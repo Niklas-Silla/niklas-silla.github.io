@@ -26,8 +26,8 @@ nav{
     display: flex;
     width: 100%;
     justify-content: space-between;
-    height: 80px;
-    line-height: 80px;
+    height: 60px;
+    line-height: 60px;
     z-index: 111;
     background-color: var(--background);
     padding: 0 5% 0 5%;
@@ -67,10 +67,10 @@ nav{
 .wrapper{
     display: flex;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 60px);
     justify-content: center;
     align-items: center;
-    padding: 0 10%;
+    padding: 0 7%;
     overflow: hidden;
 }
 .wrapper::before{
@@ -170,37 +170,59 @@ button:hover{
 }
 .imgbox{
     position: relative;
-    width: 80%;
-    height: 80%;
+    /*width: 100%;
+    height: 100%;*/
     margin-left: 20%;
 }
 .imgbox img{
     position:relative;
-    height: 80%;
-    width: calc(90% - 80px);
+    height: 100%;
+    width: calc(130% - 60px);
     top: -100px;
     right: 50px;
     animation: animateUser 4s linear infinite;
+    transform: scaleX(-1);
 }
-@keyframes animateUser {
-    50%{
-        right: 30px;
-        top: -90px;
-    }
-}
+
 .imgbox #brushstroke{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(-35deg);
     width: 160%;
+    height: auto;
     filter: saturate(200%);
     animation: animate 4s linear infinite;
 }
-@keyframes animate {
+.imgbox #me{
+    bottom: 0;
+}
+/*@keyframes animate {
     50%{
         top: 49%;
         left: 51%;
         width: 155%;
     }
-}
+}*/
+
+/*@keyframes animateUser {
+    50%{
+        right: 30px;
+        top: -90px;
+    }
+}*/
+
+
+
+
+
+/*Dark Theme*/
+@media (prefers-color-scheme: dark) {
+    :root{
+        --primary: white;
+        --secondary: #B0BEC5;
+        --accent: #FFA500;
+        --accent2: #F55900;
+        --background: #1C313A;
+    }
+  }
