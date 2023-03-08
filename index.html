@@ -13,10 +13,17 @@
     <script src="https://kit.fontawesome.com/1d2abf503e.js" crossorigin="anonymous"></script>
     <div class="container">
         <nav>
+            <div class="logo"><img alt="Freator"></div>
             <ul class="navLinks">
                 <li><a href="#">home</a></li>
                 <li><a href="#">skills</a></li>
                 <li><a href="#">webseits</a></li>
+                <div class="smlinksSP">
+                    <a href="https://www.youtube.com/@freator"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/freator/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@freator.cc"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.facebook.com/freator.cc/"><i class="fab fa-facebook"></i></a>
+                </div>
             </ul>
             <div class="smlinks">
                 <a href="https://www.youtube.com/@freator"><i class="fab fa-youtube"></i></a>
@@ -24,6 +31,11 @@
                 <a href="https://www.tiktok.com/@freator.cc"><i class="fab fa-tiktok"></i></a>
                 <a href="https://www.facebook.com/freator.cc/"><i class="fab fa-facebook"></i></a>
             </div>
+            <div class="burger-menue">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+              </div>
         </nav>
 
         <div class="wrapper">
@@ -66,6 +78,22 @@
         prefersDarkScheme.addEventListener('change', (event) => {
         toggleDarkMode(event.matches);
         });
+    </script>
+    <script>
+        const navSlide = () => {
+            const burgerMenue = document.querySelector('.burger-menue');
+            const nav = document.querySelector('.navLinks');
+            const navLinks = document.querySelectorAll('.navLinks li');
+
+            burgerMenue?.addEventListener('click', () => {
+                //Einfahren des Burgermenüs
+                nav?.classList.toggle('nav-active');
+
+                //Burgermenü Symbol Animation
+                burgerMenue.classList.toggle('toggle');
+            });
+        }
+        navSlide();
     </script>
 </body>
 </html>   

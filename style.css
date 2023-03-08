@@ -5,7 +5,21 @@
     --accent: #F55900;
     --accent2: #FFA500;
     --background: white;
+    --backgrounddark: rgba(255, 255, 255, 0.9);
+    --imgLogo: url("/Freator_Schrift_color_lighttheme.png");
 }
+/*Dark Theme*/
+@media (prefers-color-scheme: dark) {
+    :root{
+        --primary: white;
+        --secondary: #B0BEC5;
+        --accent: #FFA500;
+        --accent2: #F55900;
+        --background: #1C313A;
+        --backgrounddark: rgba(36, 63, 74, 0.9);
+        --imgLogo: url("/Freator_Schrift_color_darktheme.png");
+    }
+  }
 
 *{
     margin: 0;
@@ -26,6 +40,7 @@ nav{
     display: flex;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
     height: 60px;
     line-height: 60px;
     z-index: 111;
@@ -40,6 +55,11 @@ nav{
     letter-spacing: 3px;
     cursor: pointer;
     text-transform: uppercase;
+}
+.logo img{
+    height: 4vh;
+    align-items: center;
+    content: var(--imgLogo);
 }
 .navLinks{
     display: flex;
@@ -56,8 +76,11 @@ nav{
     text-transform: capitalize;
 }
 .navLinks li:hover a,
-.smlinks a:hover{
+.smlinks a:hover, .smlinksSP a:hover{
     color: var(--accent);
+}
+.smlinksSP{
+    display: none;
 }
 .smlinks a{
     font-size: 25px;
@@ -217,16 +240,6 @@ p{
 
 
 
-/*Dark Theme*/
-@media (prefers-color-scheme: dark) {
-    :root{
-        --primary: white;
-        --secondary: #B0BEC5;
-        --accent: #FFA500;
-        --accent2: #F55900;
-        --background: #1C313A;
-    }
-  }
 
 /*Responsive Design*/
 @media only screen and (max-width: 1080px) {
@@ -236,8 +249,85 @@ p{
         margin-left: 0%;
     }
   }
-/*Tablet*/
-@media only screen and (max-width: 970px) {
-    
-  }
+  
+
 /*Smartphone*/
+
+/* burger Menü Zeichen zum ausklappen */
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 5px);
+  }
+  .toggle .line2{
+    opacity: 0;
+  }
+  .toggle .line3{
+    transform: rotate(45deg) translate(-5px, -5px);
+  }  
+
+.burger-menue{
+    display: none;
+    cursor: pointer;
+  }
+  .burger-menue div{
+    width: 25px;
+    height: 2px;
+    background-color: theme('colors.light-elements');
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+
+@media only screen and (max-width: 970px) {
+  nav{
+    justify-content: space-between;
+  }
+  .burger-menue{
+    display: block;
+  }
+  .burger-menue div{
+    background-color: var(--secondary);;
+  }
+  .burger-menue:active div, .burger-menue:hover div{
+    background-color: var(--accent);;
+  }
+  .navLinks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 0px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    transition: 0.5s;
+    overflow: hidden;
+    background: var(--backgrounddark);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  .navLinks.nav-active{
+    height: 100vh;
+    z-index: 10;
+  }
+  .navLinks li{
+    list-style: none;
+    margin-top: 10vh;
+    }
+    .navLinks li a{
+        font-size: 30px;
+        color: var(--primary);
+        letter-spacing: 2px;
+    }
+    .smlinksSP{
+        display: block;
+        margin-top: 10vh;
+  }
+  .smlinksSP a{
+    color: var(--primary);
+    font-size: 40px;
+    margin: 0px 5vw;
+  }
+  .smlinks{
+    display: none;
+  }
+}
