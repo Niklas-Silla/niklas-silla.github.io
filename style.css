@@ -137,6 +137,9 @@ nav{
     z-index: 5;
     width: 70%;
 }
+.imgboxSP{
+    display: none;
+}
 .topline{
     display: block;
     position:relative;
@@ -217,7 +220,6 @@ p{
     width: calc(130% - 60px);
     top: 55%;
     right: 55%;
-    animation: animateUser 4s linear infinite;
     transform: scaleX(-1);
 }
 
@@ -229,29 +231,7 @@ p{
     }
 }
 
-@keyframes animateUser {
-    50%{
-        right: 30px;
-        top: -500px;
-    }
-}
 
-
-
-
-
-
-/*Responsive Design*/
-@media only screen and (max-width: 1080px) {
-    .imgbox{
-        width: 130%;
-        height: 130%;
-        margin-left: 0%;
-    }
-  }
-  
-
-/*Smartphone*/
 
 /* burger Menü Zeichen zum ausklappen */
 .toggle .line1{
@@ -276,58 +256,622 @@ p{
     transition: all 0.3s ease;
   }
 
-@media only screen and (max-width: 970px) {
-  nav{
-    justify-content: space-between;
+/*Responsive Großes Design*/
+@media only screen and (max-width: 1080px) {
+
   }
-  .burger-menue{
-    display: block;
+@media only screen and (max-width: 950px) {
+
   }
-  .burger-menue div{
-    background-color: var(--secondary);;
-  }
-  .burger-menue:active div, .burger-menue:hover div{
-    background-color: var(--accent);;
-  }
-  .navLinks{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 0px;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    transition: 0.5s;
-    overflow: hidden;
-    background: var(--backgrounddark);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-  }
-  .navLinks.nav-active{
-    height: 100vh;
-    z-index: 10;
-  }
-  .navLinks li{
-    list-style: none;
-    margin-top: 10vh;
-    }
-    .navLinks li a{
-        font-size: 30px;
-        color: var(--primary);
-        letter-spacing: 2px;
-    }
-    .smlinksSP{
+/*Responsive Burgermenue*/
+@media only screen and (max-width: 800px) {
+    nav{
+        justify-content: space-between;
+      }
+      .burger-menue{
         display: block;
+      }
+      .burger-menue div{
+        background-color: var(--secondary);;
+      }
+      .burger-menue:active div, .burger-menue:hover div{
+        background-color: var(--accent);;
+      }
+      .navLinks{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 0px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        transition: 0.5s;
+        overflow: hidden;
+        background: var(--backgrounddark);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        z-index: 10;
+      }
+      .navLinks.nav-active{
+        height: 100vh;
+        z-index: 10;
+      }
+      .navLinks li{
+        list-style: none;
         margin-top: 10vh;
-  }
-  .smlinksSP a{
-    color: var(--primary);
-    font-size: 40px;
-    margin: 0px 5vw;
-  }
-  .smlinks{
+        }
+        .navLinks li a{
+            font-size: 30px;
+            color: var(--primary);
+            letter-spacing: 2px;
+        }
+        .smlinksSP{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 10vh;
+            width: 80%;
+      }
+      .smlinksSP a{
+        color: var(--primary);
+        font-size: 40px;
+        margin: 0px 5vw;
+      }
+      .smlinks{
+        display: none;
+      }
+        .wrapper{
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: start;
+            padding: 10% 10% 0% 10%;
+        }
+        .wrapper::before{
+            height: 60vw;
+            width: 60vw;
+            left: -18%;
+            top: 31%;
+        }
+        @keyframes object1{
+            50%{
+                left: -18%;
+                top: 32%;
+            }
+        }
+        .wrapper::after{
+            height: 15vw;
+            width: 15vw;
+            left: 75%;
+            top: 12%;
+        }
+        @keyframes object2{
+            50%{
+                left: 75%;
+                top: 11%;
+            }
+        }
+        .cols{
+            width: 100%;
+        }
+        .cols0{
+            z-index: 5;
+            width: 100%;
+        }
+        .topline{
+            font-size: 25px;
+        }
+        .topline::after{
+            height: 3px;
+            width: 20px;
+        }
+        h1{
+            font-size: 2.5em;
+        }
+        p{
+            width: 100%;
+            font-size: 1.1em;
+        }
+        .cols1{
+            display: none;
+        }
+        .imgboxSP{
+            display: block;
+        }
+        .buttons{
+            display: none;
+        }
+        .row{
+            position: relative;
+            width: 100%;
+        }
+        .imgboxSP{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            width: 100%;
+        }
+        
+        .imgboxSP #brushstroke{
+            position: relative;
+            top: -40px;
+            left: 300px;
+            transform: rotate(-35deg);
+            width: 110%;
+            height: auto;
+            filter: saturate(150%);
+            animation: animate 4s linear infinite;
+        }
+        .imgboxSP #me{
+            position: relative;
+            width: calc(130% - 60px);
+            top: -30px;
+            right: 40%;
+            width: 100%;
+            height: auto;
+            transform: scaleX(-1);
+        }
+        
+        @keyframes animate {
+            50%{
+                top: -41px;
+            }
+        }
+      
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 700px) {
+    nav{
+        justify-content: space-between;
+      }
+      .burger-menue{
+        display: block;
+      }
+      .burger-menue div{
+        background-color: var(--secondary);;
+      }
+      .burger-menue:active div, .burger-menue:hover div{
+        background-color: var(--accent);;
+      }
+      .navLinks{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 0px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        transition: 0.5s;
+        overflow: hidden;
+        background: var(--backgrounddark);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        z-index: 10;
+      }
+      .navLinks.nav-active{
+        height: 100vh;
+        z-index: 10;
+      }
+      .navLinks li{
+        list-style: none;
+        margin-top: 10vh;
+        }
+        .navLinks li a{
+            font-size: 30px;
+            color: var(--primary);
+            letter-spacing: 2px;
+        }
+        .smlinksSP{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 10vh;
+            width: 80%;
+      }
+      .smlinksSP a{
+        color: var(--primary);
+        font-size: 40px;
+        margin: 0px 5vw;
+      }
+      .smlinks{
+        display: none;
+      }
+        .wrapper{
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: start;
+            padding: 10% 10% 0% 10%;
+        }
+        .wrapper::before{
+            height: 60vw;
+            width: 60vw;
+            left: -18%;
+            top: 31%;
+        }
+        @keyframes object1{
+            50%{
+                left: -18%;
+                top: 32%;
+            }
+        }
+        .wrapper::after{
+            height: 15vw;
+            width: 15vw;
+            left: 75%;
+            top: 12%;
+        }
+        @keyframes object2{
+            50%{
+                left: 75%;
+                top: 11%;
+            }
+        }
+        .cols{
+            width: 100%;
+        }
+        .cols0{
+            z-index: 5;
+            width: 100%;
+        }
+        .topline{
+            font-size: 25px;
+        }
+        .topline::after{
+            height: 3px;
+            width: 20px;
+        }
+        h1{
+            font-size: 2.5em;
+        }
+        p{
+            width: 100%;
+            font-size: 1.1em;
+        }
+        .cols1{
+            display: none;
+        }
+        .imgboxSP{
+            display: block;
+        }
+        .buttons{
+            display: none;
+        }
+        .row{
+            position: relative;
+            width: 100%;
+        }
+        .imgboxSP{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            width: 100%;
+        }
+        
+        .imgboxSP #brushstroke{
+            position: relative;
+            top: -40px;
+            left: 300px;
+            transform: rotate(-35deg);
+            width: 110%;
+            height: auto;
+            filter: saturate(150%);
+            animation: animate 4s linear infinite;
+        }
+        .imgboxSP #me{
+            position: relative;
+            width: calc(130% - 60px);
+            top: -30px;
+            right: 40%;
+            width: 100%;
+            height: auto;
+            transform: scaleX(-1);
+        }
+        
+        @keyframes animate {
+            50%{
+                top: -41px;
+            }
+        }
+}
+
+
+
+
+
+
+
+
+
+/* Motto entfällt */
+@media only screen and (max-width: 600px) {
+    .motto{
+        display: none;
+      }
+
+      nav{
+        justify-content: space-between;
+      }
+      .burger-menue{
+        display: block;
+      }
+      .burger-menue div{
+        background-color: var(--secondary);;
+      }
+      .burger-menue:active div, .burger-menue:hover div{
+        background-color: var(--accent);;
+      }
+      .navLinks{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 0px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        transition: 0.5s;
+        overflow: hidden;
+        background: var(--backgrounddark);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        z-index: 10;
+      }
+      .navLinks.nav-active{
+        height: 100vh;
+        z-index: 10;
+      }
+      .navLinks li{
+        list-style: none;
+        margin-top: 10vh;
+        }
+        .navLinks li a{
+            font-size: 30px;
+            color: var(--primary);
+            letter-spacing: 2px;
+        }
+        .smlinksSP{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 10vh;
+            width: 80%;
+      }
+      .smlinksSP a{
+        color: var(--primary);
+        font-size: 40px;
+        margin: 0px 5vw;
+      }
+      .smlinks{
+        display: none;
+      }
+        .wrapper{
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: start;
+            padding: 10% 10% 0% 10%;
+        }
+        .wrapper::before{
+            height: 60vw;
+            width: 60vw;
+            left: -18%;
+            top: 31%;
+        }
+        @keyframes object1{
+            50%{
+                left: -18%;
+                top: 32%;
+            }
+        }
+        .wrapper::after{
+            height: 15vw;
+            width: 15vw;
+            left: 75%;
+            top: 12%;
+        }
+        @keyframes object2{
+            50%{
+                left: 75%;
+                top: 11%;
+            }
+        }
+        .cols{
+            width: 100%;
+        }
+        .cols0{
+            z-index: 5;
+            width: 100%;
+        }
+        .topline{
+            font-size: 25px;
+        }
+        .topline::after{
+            height: 3px;
+            width: 20px;
+        }
+        h1{
+            font-size: 2.5em;
+        }
+        p{
+            width: 100%;
+            font-size: 1.1em;
+        }
+        .cols1{
+            display: none;
+        }
+        .imgboxSP{
+            display: block;
+        }
+        .buttons{
+            display: none;
+        }
+        .row{
+            position: relative;
+            width: 100%;
+        }
+        .imgboxSP{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            width: 100%;
+        }
+        
+        .imgboxSP #brushstroke{
+            position: relative;
+            top: -40px;
+            left: 300px;
+            transform: rotate(-35deg);
+            width: 110%;
+            height: auto;
+            filter: saturate(150%);
+            animation: animate 4s linear infinite;
+        }
+        .imgboxSP #me{
+            position: relative;
+            width: calc(130% - 60px);
+            top: -30px;
+            right: 40%;
+            width: 100%;
+            height: auto;
+            transform: scaleX(-1);
+        }
+        
+        @keyframes animate {
+            50%{
+                top: -41px;
+            }
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*Smartphone*/
+@media only screen and (max-width: 500px) {
+
+  .motto{
     display: none;
   }
+    .wrapper{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: start;
+        padding: 10% 10% 0% 10%;
+    }
+    .wrapper::before{
+        height: 60vw;
+        width: 60vw;
+        left: -18%;
+        top: 31%;
+    }
+    @keyframes object1{
+        50%{
+            left: -18%;
+            top: 32%;
+        }
+    }
+    .wrapper::after{
+        height: 15vw;
+        width: 15vw;
+        left: 75%;
+        top: 12%;
+    }
+    @keyframes object2{
+        50%{
+            left: 75%;
+            top: 11%;
+        }
+    }
+    .cols{
+        width: 100%;
+    }
+    .cols0{
+        z-index: 5;
+        width: 100%;
+    }
+    .topline{
+        font-size: 25px;
+    }
+    .topline::after{
+        height: 3px;
+        width: 20px;
+    }
+    h1{
+        font-size: 2.5em;
+    }
+    p{
+        width: 100%;
+        font-size: 1.1em;
+    }
+    .cols1{
+        display: none;
+    }
+    .imgboxSP{
+        display: block;
+    }
+    .buttons{
+        display: none;
+    }
+                .row{
+                    position: relative;
+                    width: 100%;
+                }
+                .imgboxSP{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    width: 100%;
+                }
+                
+                .imgboxSP #brushstroke{
+                    position: relative;
+                    top: -40px;
+                    left: 250px;
+                    transform: rotate(-35deg);
+                    width: 120%;
+                    height: auto;
+                    filter: saturate(150%);
+                    animation: animate 4s linear infinite;
+                }
+                .imgboxSP #me{
+                    position: relative;
+                    width: calc(130% - 60px);
+                    top: -45px;
+                    right: 40%;
+                    width: 120%;
+                    height: auto;
+                    transform: scaleX(-1);
+                }
+                
+                @keyframes animate {
+                    50%{
+                        top: -41px;
+                    }
+                }
 }
