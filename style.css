@@ -7,6 +7,10 @@
     --background: white;
     --backgrounddark: rgba(255, 255, 255, 0.9);
     --imgLogo: url("/Freator_Schrift_color_lighttheme.png");
+    --boxh3: black;
+    --boxp: dimgray;
+    --boxbg: #EBF1F8;
+    --boxhr: #B0BEC5;
 }
 /*Dark Theme*/
 @media (prefers-color-scheme: dark) {
@@ -18,6 +22,10 @@
         --background: #1C313A;
         --backgrounddark: rgba(36, 63, 74, 0.9);
         --imgLogo: url("/Freator_Schrift_color_darktheme.png");
+        --boxh3: black;
+        --boxp: dimgray;
+        --boxbg: #EBF1F8;
+        --boxhr: #455A64;
     }
   }
 

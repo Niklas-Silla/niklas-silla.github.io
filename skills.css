@@ -1,0 +1,122 @@
+body{
+    overflow: scroll;
+}
+
+.skillcontainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+h2 {
+    color: var(--secondary);
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+h2:hover {
+    color: var(--accent);
+}
+hr{
+    margin-top: 10px;
+    border: 1px solid var(--boxhr);
+}
+.skill:hover h3{
+    color: var(--accent2);
+}
+.skills {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+}
+
+.skill {
+    flex-basis: calc(33.33% - 20px);
+    margin: 0px 10px 20px 10px;
+    padding: 20px;
+    background-color: var(--boxbg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    transition: all .2s ease-in-out;
+}
+.skill:hover{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: scale(1.01);
+}
+
+    .skill-title {
+        display: flex;
+        align-items: center;
+    }
+    
+    .skill-title-text {
+        margin-right: 10px;
+    }
+    
+    .skill-title-icon {
+        margin-left: auto;
+    }
+    .skill h3 i {
+        font-size: 24px; 
+      }
+    
+.skill h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--boxh3);
+}
+
+.skill p {
+    margin: 0;
+    color: var(--boxp);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 800px) {
+    .skill {
+        flex-basis: 100%;
+    }
+    h2{
+        text-align: center;
+        font-size: 24px;
+    }
+    h2.active{
+        display: block;
+        text-align: center;
+    }
+}
+
+.active {
+    display: flex;
+}
+h2.active{
+    color: var(--accent);
+}
+h2.active hr{
+    display: none;
+  }
+
+.toggle-icon {
+    margin-left: 6px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .toggle-icon.active {
+    transform: rotate(180deg);
+  }
+  
