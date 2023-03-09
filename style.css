@@ -6,7 +6,7 @@
     --accent2: #FFA500;
     --background: white;
     --backgrounddark: rgba(255, 255, 255, 0.9);
-    --imgLogo: url("/Freator_Schrift_color_lighttheme.png");
+    --imgLogo: url("images/Freator_Schrift_color_lighttheme.png");
     --boxh3: black;
     --boxp: dimgray;
     --boxbg: #EBF1F8;
@@ -21,7 +21,7 @@
         --accent2: #F55900;
         --background: #1C313A;
         --backgrounddark: rgba(36, 63, 74, 0.9);
-        --imgLogo: url("/Freator_Schrift_color_darktheme.png");
+        --imgLogo: url("images/Freator_Schrift_color_darktheme.png");
         --boxh3: black;
         --boxp: dimgray;
         --boxbg: #EBF1F8;

@@ -1,0 +1,95 @@
+body{
+    overflow: scroll;
+}
+.websitecontainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+.website:hover h3{
+    color: var(--accent2);
+}
+.websites {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+}
+.website {
+    text-decoration: none;
+    display: block;
+    flex-basis: calc(33.33% - 20px);
+    margin: 0px 10px 20px 10px;
+    padding: 20px;
+    background-color: var(--boxbg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.website:hover{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: scale(1.01);
+}
+
+    .website-text {
+        margin-right: 10px;
+        width: 90%;
+    }
+    .website-logo {
+        width: 10%;
+    }
+    .website .website-logo img{
+        width: 100%;
+        margin-left: auto;
+    }
+    .website .website-text h3 {
+        font-size: 24px; 
+      }
+    
+.website h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--boxh3);
+}
+
+.website p {
+    margin: 0;
+    color: var(--boxp);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 800px) {
+    .website {
+        flex-basis: 100%;
+    }
+    h2{
+        text-align: center;
+        font-size: 24;
+    }
+}
+@media screen and (max-width: 700px) {
+    .website-text {
+        width: 85%;
+    }
+    .website-logo {
+        width: 15%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .website-text {
+        width: 80%;
+    }
+    .website-logo {
+        width: 20%;
+    }
+}
