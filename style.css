@@ -447,7 +447,7 @@ p{
       }
       .navLinks li{
         list-style: none;
-        margin-top: 10vh;
+        margin-top: 8vh;
         }
         .navLinks li a{
             font-size: 30px;
@@ -458,7 +458,7 @@ p{
             display: flex;
             flex-direction: row;
             justify-content: center;
-            margin-top: 10vh;
+            margin-top: 8vh;
             width: 80%;
       }
       .smlinksSP a{
